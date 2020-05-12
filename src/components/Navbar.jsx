@@ -2,11 +2,8 @@ import React from 'react';
 import { useDarkMode } from './hooks/useDarkMode.jsx'
 
 const Navbar = () => {
-  const [darkMode, setDarkMode] = useDarkMode('dark-mode', false);
-  const toggleMode = e => {
-    e.preventDefault();
-    setDarkMode(!darkMode);
-  };
+  const [darkMode, toggleMode] = useDarkMode('dark-mode', false);
+
   return (
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
@@ -21,3 +18,12 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+// you're creating a custom hook that adds or removes a class called 'dark-mode' to the body. --> Example: document.body.classList.add('dark-mode') 
+
+// the class 'dark-mode' is added when the darkMode is set to true and vice versa --> Hint* Use a ternary conditional statement here.
+
+// Forget using the localStorage for now to make this problem easier to solve. Use the useState hook. 
+
+
